@@ -1,0 +1,16 @@
+.trailer{
+    background-color: #000;
+    min-height: 80vh;
+    padding: 5.6vw;
+
+    &__content{
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+        background-image: url('/src/images/hero_window.png');
+        background-size: cover;
+        filter: grayscale(50%);
+        
+        height: 70vh;
+    }
+}

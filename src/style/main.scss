@@ -1,0 +1,28 @@
+@use '../style/configs/reset';
+@use '../style/content/header';
+@use '../style/content/hero';
+@use '../style/content/trailer';
+
+@mixin text($fontSize:16px){
+    font-size: $fontSize;
+    line-height: $fontSize+10;
+    color: #D9E3E9;
+}
+
+.text--small{
+    @include text(12px);
+}
+
+.text--big{
+    @include text(18px);
+}
+
+.text--link{
+    @include text;
+    text-decoration: none;
+    font-weight: bold;
+
+    &--primary{
+        color: #000;
+    }
+}
