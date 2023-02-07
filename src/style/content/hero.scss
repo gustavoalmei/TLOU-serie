@@ -1,7 +1,7 @@
 .hero{
     min-height: calc(100vh - 95px);
     background-position: center;
-    background: linear-gradient(0deg, rgba(0,0,0, .6)20%, rgba(0,0,0, 0)80%), url('/dist/images/hero_the_last_of_us.png');
+    background: linear-gradient(0deg, rgba(0,0,0, .6)20%, rgba(0,0,0, 0)80%), url('../images/hero_the_last_of_us.png');
     background-size: cover;
     background-repeat: no-repeat;
     filter: grayscale(.4);
@@ -9,11 +9,32 @@
     align-items: center;
 
     &__content{
-        width: 1024px;
+        width: 1280px;
         margin: 0 auto;
+        display: flex;
+        align-items: end;
+        justify-content: space-around;
+        gap: 20px;
+        
+        @media (max-width:1366px) {
+            max-width: 768px;
+        }
 
         img{
             height: 560px;
+
+            @media (max-width:1366px) {
+                height: 360px;
+            }
+        }
+
+        .button{
+            transition: background-color 500ms ease, color 500ms ease;
+            &:hover{
+                background-color: #fff;
+                color: #000;
+                transition: background-color 500ms ease, color 500ms ease;
+            }
         }
     }
 }

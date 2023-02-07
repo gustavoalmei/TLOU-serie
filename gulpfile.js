@@ -2,7 +2,6 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
-const htmlmin = require('gulp-htmlmin');
 
 function imageCompress(cb){
     return gulp.src('./src/images/**/*.png')
@@ -27,16 +26,7 @@ function scriptCompress(cb){
     cb();
 }
 
-function htmlCompress(cb){
-    return gulp.src('./index.html')
-        .pipe(htmlmin({
-            collapseWhitespace: true,
-        }))
-        .pipe(gulp.dest('./dist'));
-        cb();
-}
-
-exports.default = gulp.parallel([imageCompress, styleCompress, scriptCompress, htmlCompress]);
+exports.default = gulp.parallel([imageCompress, styleCompress, scriptCompress]);
 exports.watch = function(){
     gulp.watch('./src/style/**/*.scss', gulp.parallel(styleCompress));
     gulp.watch('./src/script/**/*.js', gulp.parallel(scriptCompress));
