@@ -21,6 +21,10 @@
             justify-content: space-between;
             align-items: center;
             
+            @media (max-width:768px) {
+                flex-direction: column;
+            }
+
             img{
                 max-width: 350px;
                 width: 100%;

@@ -17,6 +17,10 @@ header{
         
         img{
             height: 65px;
+
+            @media (max-width:768px) {
+                height: 40px;
+            }
         }
         
         &__list{
@@ -26,6 +30,14 @@ header{
             &__item{
                 display: inline-block;
                 margin: 0 10px;
+                @media (max-width:768px) {
+                    margin: 0 5px;
+                }
+                .text--link{
+                    @media (max-width:768px) {
+                        font-size: 13px;
+                    }
+                }
             }
         }
     }

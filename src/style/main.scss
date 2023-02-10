@@ -31,6 +31,10 @@
 
 .text--big{
     @include text(18px);
+    
+    &--bold{
+        font-weight: bold
+    }
 }
 
 .text--link{
